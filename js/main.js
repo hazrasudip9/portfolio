@@ -93,11 +93,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Dark mode toggle button
   let darkBtn = document.createElement('button');
-  darkBtn.textContent = '🌙';
+  darkBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="7" width="18" height="10" rx="5" fill="#232a36" stroke="#34c759" stroke-width="2"/><circle cx="8.5" cy="12" r="1.5" fill="#fff"/><circle cx="15.5" cy="12" r="1.5" fill="#fff"/><rect x="9.5" y="15" width="5" height="1.5" rx="0.75" fill="#34c759"/></svg>';
   darkBtn.title = 'Toggle dark mode';
   darkBtn.style.position = 'fixed';
-  darkBtn.style.top = '1.2rem';
-  darkBtn.style.right = '1.2rem';
+  darkBtn.style.bottom = '1.2rem';
+  darkBtn.style.left = '1.2rem';
   darkBtn.style.zIndex = '150';
   darkBtn.style.background = '#fff';
   darkBtn.style.border = 'none';
