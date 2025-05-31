@@ -225,15 +225,63 @@ header {
   border-color: #0071e3;
 }
 @media (max-width: 900px) {
-  .quick-highlights {
+  .nav-container {
     flex-direction: column;
-    align-items: stretch;
+    align-items: flex-start;
     gap: 1rem;
   }
-  .highlight-card {
+  .nav-links {
+    flex-direction: column;
+    gap: 0.8rem;
+    width: 100%;
+    padding-left: 0;
+  }
+  .nav-links a {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0.8rem;
+  }
+  .hero, .page-content, .intro, .blog-preview {
+    padding: 1.2rem 0.7rem;
+    max-width: 100vw;
+    margin: 1.5rem 0;
+    font-size: 1rem;
+  }
+  .projects-title {
+    font-size: 1.4rem;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  .project-card {
+    padding: 1.2rem 0.7rem 1rem 0.7rem;
     min-width: 0;
     width: 100%;
-    justify-content: flex-start;
+  }
+  .project-actions {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .footer-note {
+    font-size: 0.85rem;
+  }
+  .raksha-title {
+    font-size: 1.2rem;
+  }
+  .section h2 {
+    font-size: 1.08rem;
+  }
+}
+@media (max-width: 400px) {
+  .hero .mono {
+    font-size: 1.1rem;
+  }
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+  .projects-title {
+    font-size: 1.1rem;
   }
 }
 
@@ -790,9 +838,12 @@ body.dark-mode #robot-svg {
 
 @media (max-width: 400px) {
   .hero .mono {
-    font-size: 1.7rem;
+    font-size: 1.1rem;
   }
   .hero-subtitle {
     font-size: 0.95rem;
+  }
+  .projects-title {
+    font-size: 1.1rem;
   }
 }
