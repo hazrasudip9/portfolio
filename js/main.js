@@ -106,4 +106,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Back to top button
   createBackToTop();
+
+  // --- BIG ROBOT DARK MODE TOGGLE ---
+  const bigRobot = document.getElementById('bigRobotToggle');
+  if (bigRobot) {
+    bigRobot.addEventListener('click', toggleDarkMode);
+  }
 });
