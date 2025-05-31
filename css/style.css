@@ -272,6 +272,46 @@ body.dark-mode .project-link:hover {
   color: #fff;
 }
 
+/* --- DARK MODE TOGGLE BUTTON (ROBOT) --- */
+.dark-toggle-btn {
+  position: fixed;
+  bottom: 1.2rem;
+  left: 1.2rem;
+  z-index: 150;
+  background: rgba(255,255,255,0.85);
+  border: none;
+  border-radius: 50%;
+  width: 2.7rem;
+  height: 2.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px #0071e344, 0 1.5px 0 #fff;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, filter 0.2s;
+  filter: drop-shadow(0 2px 8px #34c75933);
+  /* Glass effect */
+  backdrop-filter: blur(10px) saturate(1.2);
+  -webkit-backdrop-filter: blur(10px) saturate(1.2);
+}
+.dark-toggle-btn svg {
+  width: 1.7rem;
+  height: 1.7rem;
+  display: block;
+}
+.dark-toggle-btn:hover {
+  background: #e5e9f2;
+  box-shadow: 0 8px 32px #34c75944;
+  filter: brightness(1.08) drop-shadow(0 4px 16px #0071e344);
+}
+body.dark-mode .dark-toggle-btn {
+  background: rgba(30,34,44,0.95);
+  box-shadow: 0 4px 16px #34c75944;
+}
+body.dark-mode .dark-toggle-btn:hover {
+  background: #232a36;
+}
+
 /* --- GLASSMORPHISM UTILITY --- */
 .glass {
   background: rgba(255,255,255,0.55);
