@@ -1,38 +1,46 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>sudo awakening — Sudip Hazra</title>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Inter&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sudip Hazra - sudo awakening</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=JetBrains+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <header class="hero">
+  <header>
+    <nav class="nav-container">
+      <div class="logo">sudo awakening</div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
     <h1 class="mono">sudo awakening</h1>
     <p class="hero-subtitle">I walk the line between data and dharma — building systems that reflect truth, security, and soul.</p>
-  </header>
-  <section class="about">
-    <p>I'm <span class="name-highlight">Sudip Hazra</span>. A cybersecurity engineer, philosopher, and systems thinker.</p>
   </section>
-  <section class="projects">
-    <h2>Projects</h2>
-    <div class="project-card">🧠 DharmaOS</div>
-    <div class="project-card">🕸️ Conmon Platform</div>
-    <div class="project-card">🛡️ SentinelAshoka</div>
+
+  <section class="intro fade-in">
+    <p>Hello, I'm <span class="name-highlight">Sudip Hazra</span>, a backend engineer and cyber Dharma practitioner specializing in log management and data analytics.</p>
   </section>
-  <section class="blog">
-    <h2>Latest Blog Post</h2>
-    <p>Zero Trust as a Spiritual Practice: Rethinking Access & Ethics</p>
+
+  <section class="blog-preview fade-in">
+    <h2>Latest Blog</h2>
+    <article>
+      <h3><a href="#">The Dharma of Zero Trust Architecture</a></h3>
+      <p>An exploration of cybersecurity through the lens of ancient wisdom and modern techniques.</p>
+    </article>
   </section>
-  <section class="contact">
-    <h2>Contact</h2>
-    <div class="contact-links">
-      <a href="mailto:sudip@sudiphazra.com" class="mono">sudip@sudiphazra.com</a>
-      <a href="https://github.com/sudiphazra" class="mono">GitHub</a>
-      <a href="#" class="mono">LinkedIn</a>
-    </div>
-  </section>
+
+  <footer>
+    <p>© 2025 Sudip Hazra | <a href="mailto:sudip@sudiphazra.com">sudip@sudiphazra.com</a></p>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>

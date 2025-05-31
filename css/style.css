@@ -1,0 +1,145 @@
+/* Base resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0f172a;
+  color: #e0e7ff;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: #a5b4fc;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+/* Header/Nav */
+header {
+  background-color: #1e293b;
+  padding: 1rem 2rem;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #818cf8;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.8rem;
+}
+
+.nav-links a {
+  font-weight: 500;
+  color: #cbd5e1;
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  background-color: #6366f1;
+  color: white;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 5rem 2rem 3rem 2rem;
+  flex-grow: 1;
+}
+
+.hero .mono {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #a5b4fc;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  color: #c7d2fe;
+}
+
+/* Intro & Blog Preview */
+.intro,
+.blog-preview {
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
+  padding: 0 1rem;
+  font-size: 1.1rem;
+  color: #cbd5e1;
+}
+
+.name-highlight {
+  font-weight: 700;
+  color: #818cf8;
+}
+
+.blog-preview h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #a5b4fc;
+}
+
+.blog-preview article h3 a {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #c7d2fe;
+}
+
+.blog-preview article p {
+  margin-top: 0.3rem;
+  color: #94a3b8;
+}
+
+/* Main content pages */
+.page-content {
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+/* Footer */
+footer {
+  background-color: #1e293b;
+  text-align: center;
+  padding: 1rem 2rem;
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin-top: auto;
+}
+
+/* Utility */
+.fade-in {
+  animation: fadeIn 1.5s ease-in forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
