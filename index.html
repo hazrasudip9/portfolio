@@ -6,6 +6,36 @@
   <title>Sudip Hazra - sudo awakening</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter&family=JetBrains+Mono&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <style>
+    body { background: #181c24 !important; color: #e5e9f2 !important; }
+    .hero, .intro, .career-overview { box-shadow: 0 8px 40px 0 #0071e344; border-radius: 1.2rem; }
+    .hero { background: linear-gradient(135deg, #232a36 60%, #181c24 100%); padding: 5rem 2rem 3rem 2rem; margin: 2.5rem auto 1.5rem auto; max-width: 900px; }
+    .hero .mono { color: #fff; text-shadow: 0 4px 32px #0071e3cc, 0 1px 0 #232a36; font-size: 3.5rem; font-family: 'JetBrains Mono', monospace; font-weight: 900; letter-spacing: 0.12em; }
+    .hero-subtitle { color: #b6e0fe; text-shadow: 0 2px 12px #232a36, 0 1px 0 #0071e3; font-size: 1.5rem; margin-top: 1.2rem; font-weight: 600; }
+    .jobs-quote { background:rgba(30,34,44,0.92); color:#e5e9f2; border-left:4px solid #34c759; text-shadow:0 2px 8px #232a36cc; margin:2.2rem auto 1.5rem auto; max-width:520px; font-size:1.18rem; font-style:italic; border-radius:1.1rem; box-shadow:0 2px 12px #b6e0fe33; padding:1.1rem 1.5rem 1.1rem 1.3rem; }
+    .jobs-quote span { color:#34c759; font-style:normal; font-weight:600; }
+    .hero-art { margin-top:2.2rem; }
+    .intro { background:rgba(30,34,44,0.92); color:#e5e9f2; border-radius:1.2rem; box-shadow:0 4px 24px #0071e344; padding:2rem 2rem 1.5rem 2rem; margin: 1.5rem auto; max-width: 900px; }
+    .intro p { color:#e5e9f2; font-size:1.13rem; text-shadow:0 2px 8px #232a36cc; }
+    .name-highlight { color:#34c759; text-shadow:0 2px 8px #0071e3cc; font-weight:700; }
+    .quick-highlights { display:flex; flex-wrap:wrap; gap:1.2rem; justify-content:center; background:rgba(30,34,44,0.92); border-radius:1.2rem; box-shadow:0 4px 24px #0071e344; padding:1.2rem 0.5rem; margin-bottom:1.2rem; }
+    .highlight-card { background:linear-gradient(120deg,#232a36 80%,#181c24 100%); color:#e5e9f2; border:2px solid #34c75944; box-shadow:0 2px 12px #34c75922; border-radius:1rem; padding:1rem 1.2rem; display:flex; align-items:center; gap:0.8rem; font-size:1.08rem; font-weight:600; min-width:220px; }
+    .highlight-card span { color:#e5e9f2; }
+    .highlight-card svg { width:2.2rem; height:2.2rem; }
+    .pill-btn { background:#34c759; color:#181c24; border-radius:999px; padding:0.55rem 1.5rem; font-weight:600; font-size:1.08rem; box-shadow:0 2px 12px #0071e344; border:none; text-decoration:none; transition:background 0.25s, color 0.25s; }
+    .pill-btn:hover { background:#0071e3; color:#fff; }
+    .career-overview { background:rgba(30,34,44,0.82); border-radius:1.2rem; box-shadow:0 4px 32px 0 #b6e0fe22; padding:2.2rem 2rem; color:#e5e9f2; border:1.5px solid rgba(52,199,89,0.13); margin:2.5rem auto; max-width:900px; }
+    .career-overview h2 { font-size:2rem; color:#34c759; margin-bottom:1.2rem; font-family:'JetBrains Mono',monospace; }
+    .career-overview ul { margin-left:1.2rem; }
+    .career-overview span, .career-overview strong { color:#b6e0fe; }
+    .career-overview .section-title { color:#34c759; font-size:1.2rem; font-weight:700; }
+    @media (max-width: 700px) {
+      .hero, .intro, .career-overview { padding:1.2rem 0.7rem; max-width:100vw; }
+      .hero .mono { font-size:2.2rem; }
+      .hero-subtitle { font-size:1.1rem; }
+      .career-overview h2 { font-size:1.3rem; }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -20,11 +50,11 @@
     </nav>
   </header>
 
-  <section class="hero" style="background: linear-gradient(135deg, #232a36 60%, #181c24 100%); box-shadow: 0 8px 40px 0 #0071e344; border-radius: 1.2rem; padding-bottom: 2.5rem;">
-    <h1 class="mono" style="color:#fff; text-shadow:0 4px 32px #0071e3cc, 0 1px 0 #232a36;">sudo awakening</h1>
-    <p class="hero-subtitle" style="color:#b6e0fe; text-shadow:0 2px 12px #232a36, 0 1px 0 #0071e3;">I walk the line between data and dharma — building systems that reflect truth, security, and soul.</p>
-    <blockquote class="jobs-quote" style="background:rgba(30,34,44,0.92); color:#e5e9f2; border-left:4px solid #34c759; text-shadow:0 2px 8px #232a36cc;">“Design is not just what it looks like and feels like. Design is how it works.”<br><span style="color:#34c759;">— Steve Jobs</span></blockquote>
-    <div class="hero-art" style="margin-top:2.2rem;">
+  <section class="hero">
+    <h1 class="mono">sudo awakening</h1>
+    <p class="hero-subtitle">I walk the line between data and dharma — building systems that reflect truth, security, and soul.</p>
+    <blockquote class="jobs-quote">“Design is not just what it looks like and feels like. Design is how it works.”<br><span>— Steve Jobs</span></blockquote>
+    <div class="hero-art">
       <svg viewBox="0 0 320 120" width="320" height="120" class="hero-svg-art">
         <defs>
           <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -49,23 +79,23 @@
   </section>
 
   <section class="intro fade-in">
-    <p style="color:#e5e9f2; font-size:1.13rem; text-shadow:0 2px 8px #232a36cc;">Hello, I'm <span class="name-highlight" style="color:#34c759; text-shadow:0 2px 8px #0071e3cc;">Sudip Hazra</span>, a backend engineer and cyber Dharma practitioner specializing in log management and data analytics.</p>
-    <div class="quick-highlights" style="background:rgba(30,34,44,0.92); border-radius:1.2rem; box-shadow:0 4px 24px #0071e344; padding:1.2rem 0.5rem; margin-bottom:1.2rem;">
-      <div class="highlight-card" style="background:linear-gradient(120deg,#232a36 80%,#181c24 100%); color:#e5e9f2; border:2px solid #34c75944; box-shadow:0 2px 12px #34c75922;">
+    <p>Hello, I'm <span class="name-highlight">Sudip Hazra</span>, a backend engineer and cyber Dharma practitioner specializing in log management and data analytics.</p>
+    <div class="quick-highlights">
+      <div class="highlight-card">
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="6" stroke="#0071e3" stroke-width="2"/><path d="M8 12l2 2 4-4" stroke="#34c759" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <span style="color:#e5e9f2;">5+ years backend/data engineering</span>
+        <span>5+ years backend/data engineering</span>
       </div>
-      <div class="highlight-card" style="background:linear-gradient(120deg,#232a36 80%,#181c24 100%); color:#e5e9f2; border:2px solid #34c75944; box-shadow:0 2px 12px #34c75922;">
+      <div class="highlight-card">
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="4" stroke="#34c759" stroke-width="2"/><circle cx="12" cy="12" r="3" stroke="#0071e3" stroke-width="2"/></svg>
-        <span style="color:#e5e9f2;">AI, analytics, and security projects</span>
+        <span>AI, analytics, and security projects</span>
       </div>
-      <div class="highlight-card" style="background:linear-gradient(120deg,#232a36 80%,#181c24 100%); color:#e5e9f2; border:2px solid #34c75944; box-shadow:0 2px 12px #34c75922;">
+      <div class="highlight-card">
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><rect x="3" y="11" width="18" height="10" rx="2" stroke="#0071e3" stroke-width="2"/><path d="M12 3v8" stroke="#34c759" stroke-width="2" stroke-linecap="round"/></svg>
-        <span style="color:#e5e9f2;">Open source & ethical tech advocate</span>
+        <span>Open source & ethical tech advocate</span>
       </div>
-      <div class="highlight-card" style="background:linear-gradient(120deg,#232a36 80%,#181c24 100%); color:#e5e9f2; border:2px solid #34c75944; box-shadow:0 2px 12px #34c75922;">
+      <div class="highlight-card">
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#34c759" stroke-width="2"/><path d="M8 12l2 2 4-4" stroke="#0071e3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <span style="color:#e5e9f2;">Cloud, DevOps, and automation</span>
+        <span>Cloud, DevOps, and automation</span>
       </div>
     </div>
     <p style="margin-top:2rem;text-align:center;">
@@ -73,16 +103,16 @@
     </p>
   </section>
 
-  <section class="career-overview fade-in" style="max-width: 800px; margin: 3rem auto 2.5rem auto; background: rgba(30,34,44,0.82); border-radius: 1.2rem; box-shadow: 0 4px 32px 0 #b6e0fe22; padding: 2.2rem 2rem; color: #e5e9f2; border: 1.5px solid rgba(52,199,89,0.13);">
-    <h2 style="font-size:2rem; color:#34c759; margin-bottom:1.2rem; font-family:'JetBrains Mono',monospace;">Career Overview — Sudip Hazra</h2>
+  <section class="career-overview fade-in">
+    <h2>Career Overview — Sudip Hazra</h2>
     <div style="margin-bottom:1.2rem;">
-      <span style="font-size:1.2rem;">🔐 <strong>Current Role</strong></span><br>
+      <span class="section-title">🔐 <strong>Current Role</strong></span><br>
       <span style="font-weight:600; color:#b6e0fe;">Backend Engineer – Cybersecurity & Data Ingestion (2023–Present)</span><br>
       <span style="color:#7fa7d9;">Domain: Security telemetry, log pipelines, and data governance</span>
     </div>
     <div style="margin-bottom:1.2rem;">
-      <strong>Key Projects:</strong>
-      <ul style="margin-left:1.2rem;">
+      <span class="section-title">Key Projects:</span>
+      <ul>
         <li>Ingested & transformed logs for threat intelligence using Databricks</li>
         <li>Built compliance-oriented pipelines for OCSF standardization</li>
         <li>Simplified telemetry ingestion (QCS → Bowler metrics)</li>
@@ -91,8 +121,8 @@
       </ul>
     </div>
     <div style="margin-bottom:1.2rem;">
-      <span style="font-size:1.2rem;">🛠️ <strong>Key Technical Skills</strong></span>
-      <ul style="margin-left:1.2rem;">
+      <span class="section-title">🛠️ <strong>Key Technical Skills</strong></span>
+      <ul>
         <li><strong>Languages:</strong> Python, Bash, SQL</li>
         <li><strong>Platforms:</strong> Databricks, GitHub Actions, Terraform</li>
         <li><strong>Security Focus:</strong> OCSF Format, Audit Pipelines, SOC2 & ISO27001 Mapping</li>
@@ -100,8 +130,8 @@
       </ul>
     </div>
     <div>
-      <span style="font-size:1.2rem;">🧪 <strong>Personal Projects</strong></span>
-      <ul style="margin-left:1.2rem;">
+      <span class="section-title">🧪 <strong>Personal Projects</strong></span>
+      <ul>
         <li><strong>TelemetryX (Log Management & Analytics Suite):</strong> Full-stack pipeline visualization and telemetry governance</li>
         <li><strong>Cyber Policy Mapper:</strong> Maps audit controls to standards like SOC2, ISO27001 using interactive HTML</li>
         <li><strong>ThreatLogOps Visualizer:</strong> Visual front-end for ingest audit logs with search & tagging</li>
