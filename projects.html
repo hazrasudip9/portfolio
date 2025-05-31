@@ -224,6 +224,24 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script>
+      // Make entire project card clickable (mobile friendly)
+      document.addEventListener('DOMContentLoaded', function() {
+        const cards = document.querySelectorAll('.project-card');
+        cards.forEach(card => {
+          // Find the main action button (prefer .pill-btn:not(.secondary), else fallback to first .pill-btn)
+          const mainBtn = card.querySelector('.pill-btn:not(.secondary)') || card.querySelector('.pill-btn');
+          if (mainBtn) {
+            card.style.cursor = 'pointer';
+            card.addEventListener('click', function(e) {
+              // Prevent double navigation if a link/button inside is clicked
+              if (e.target.closest('a, button')) return;
+              mainBtn.click();
+            });
+          }
+        });
+      });
+    </script>
   <style>
     body {
       background: linear-gradient(120deg, #f5f6fa 60%, #b6e0fe 100%, #e5e9f2 120%);
