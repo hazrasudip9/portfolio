@@ -6,8 +6,8 @@
 }
 
 body {
-  background: linear-gradient(135deg, #f5f6fa 0%, #e5e9f2 60%, #d1e3ff 100%);
-  color: #1a1a1a;
+  background: #181c24 !important;
+  color: #e5e9f2 !important;
   font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
   line-height: 1.6;
   min-height: 100vh;
@@ -34,7 +34,9 @@ a:focus {
 
 /* Header/Nav */
 header {
-  background: rgba(255,255,255,0.85);
+  background: #232a36 !important;
+  color: #b6e0fe !important;
+  border-color: #232a36 !important;
   box-shadow: 0 2px 8px 0 rgba(0,0,0,0.04);
   padding: 1rem 2rem;
   border-bottom: 1px solid #e5e9f2;
@@ -49,9 +51,9 @@ header {
   font-family: 'JetBrains Mono', monospace;
   font-size: 1.5rem;
   font-weight: 700;
-  color: #0071e3;
+  color: #34c759 !important;
   letter-spacing: 0.04em;
-  text-shadow: 0 2px 12px #34c75933;
+  text-shadow: 0 2px 12px #0071e333 !important;
   transition: color 0.3s, text-shadow 0.3s;
 }
 
@@ -69,7 +71,7 @@ header {
 
 .nav-links a {
   font-weight: 500;
-  color: #333;
+  color: #b6e0fe !important;
   padding: 0.3rem 0.7rem;
   border-radius: 6px;
   transition: background 0.3s, color 0.3s, box-shadow 0.3s;
@@ -79,9 +81,9 @@ header {
 
 .nav-links a.active,
 .nav-links a:hover {
-  background: #e5e9f2;
-  color: #0071e3;
-  box-shadow: 0 2px 12px #0071e344;
+  background: #232a36 !important;
+  color: #34c759 !important;
+  box-shadow: 0 2px 12px #34c75944 !important;
 }
 
 /* Hero */
@@ -157,8 +159,8 @@ header {
   max-width: 520px;
   font-size: 1.18rem;
   font-style: italic;
-  color: #232a36;
-  background: rgba(255,255,255,0.7);
+  color: #b6e0fe !important;
+  background: #232a36 !important;
   border-left: 4px solid #34c759;
   padding: 1.1rem 1.5rem 1.1rem 1.3rem;
   border-radius: 1.1rem;
@@ -170,7 +172,7 @@ header {
 .jobs-quote span {
   display: block;
   font-size: 1rem;
-  color: #0071e3;
+  color: #34c759 !important;
   margin-top: 0.7rem;
   font-style: normal;
   font-weight: 600;
@@ -243,7 +245,8 @@ header {
   padding: 0 1rem;
   font-size: 1.1rem;
   color: #444;
-  background: rgba(255,255,255,0.7);
+  background: #232a36 !important;
+  border: 1.5px solid rgba(52,199,89,0.13) !important;
   border-radius: 1rem;
   box-shadow: 0 2px 8px 0 rgba(0,0,0,0.03);
   letter-spacing: 0.01em;
@@ -279,18 +282,21 @@ header {
   max-width: 800px;
   margin: 3rem auto;
   padding: 2.5rem 2.2rem;
-  background: rgba(255,255,255,0.65);
+  background: #232a36 !important;
+  color: #b6e0fe !important;
+  border: 1.5px solid rgba(52,199,89,0.13) !important;
   border-radius: 1.2rem;
   box-shadow: 0 4px 32px 0 #b6e0fe22, 0 1.5px 0 #fff;
   animation: fadeIn 1.5s cubic-bezier(0.4,0,0.2,1) 0.8s both;
   backdrop-filter: blur(14px) saturate(1.1);
   -webkit-backdrop-filter: blur(14px) saturate(1.1);
-  border: 1.5px solid rgba(255,255,255,0.18);
 }
 
 /* Footer */
 footer {
-  background: rgba(255,255,255,0.85);
+  background: #232a36 !important;
+  color: #b6e0fe !important;
+  border-color: #232a36 !important;
   text-align: center;
   padding: 1rem 2rem;
   font-size: 0.95rem;
@@ -305,11 +311,11 @@ footer {
 .footer-note {
   margin-top: 0.7rem;
   font-size: 0.98rem;
-  color: #b6b6b6;
+  color: #7fa7d9 !important;
+  opacity: 0.8 !important;
   letter-spacing: 0.01em;
   text-align: center;
   font-style: italic;
-  opacity: 0.85;
 }
 
 /* --- DARK MODE TOGGLE --- */
@@ -468,6 +474,9 @@ body.dark-mode .glass {
 .project-card {
   position: relative;
   overflow: hidden;
+  background: linear-gradient(135deg, #232a36 80%, #181c24 100%) !important;
+  border-color: #0071e344 !important;
+  color: #b6e0fe !important;
 }
 .project-card.shine::after, .project-card::after {
   content: '';
@@ -630,7 +639,7 @@ body.dark-mode .timeline-event::before {
 }
 
 .project-card {
-  background: linear-gradient(135deg, #f5f6fa 80%, #e5e9f2 100%);
+  background: linear-gradient(135deg, #232a36 80%, #181c24 100%) !important;
   border-radius: 1.2rem;
   box-shadow: 0 4px 24px 0 rgba(0,0,0,0.07);
   padding: 2.5rem 2rem 1.7rem 2rem;
@@ -653,7 +662,7 @@ body.dark-mode .timeline-event::before {
 }
 .project-card h2 {
   font-size: 1.4rem;
-  color: #0071e3;
+  color: #34c759 !important;
   margin-bottom: 0.5rem;
   font-family: 'JetBrains Mono', monospace;
   letter-spacing: 0.02em;
@@ -673,8 +682,8 @@ body.dark-mode .timeline-event::before {
 }
 .project-link {
   align-self: flex-start;
-  background: #0071e3;
-  color: #fff;
+  background: #34c759 !important;
+  color: #181c24 !important;
   padding: 0.55rem 1.5rem;
   border-radius: 999px;
   font-weight: 600;
@@ -684,10 +693,8 @@ body.dark-mode .timeline-event::before {
   box-shadow: 0 2px 12px #0071e344, 0 1.5px 0 #fff;
 }
 .project-link:hover {
-  background: #fff;
-  color: #0071e3;
-  box-shadow: 0 4px 24px #34c75944;
-  transform: scale(1.06) translateY(-2px);
+  background: #0071e3 !important;
+  color: #fff !important;
 }
 
 /* --- BIG ROBOT DARK MODE TOGGLE --- */

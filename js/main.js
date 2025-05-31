@@ -15,12 +15,6 @@ function typeWriter(element, text, speed = 80) {
   typing();
 }
 
-// --- DARK MODE TOGGLE ---
-function toggleDarkMode() {
-  document.body.classList.toggle('dark-mode');
-  localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
-}
-
 // --- BACK TO TOP BUTTON ---
 function createBackToTop() {
   const btn = document.createElement('button');
@@ -91,25 +85,13 @@ document.addEventListener('DOMContentLoaded', function () {
     canvas.height = height;
   });
 
-  // Dark mode toggle button
-  let darkBtn = document.createElement('button');
-  darkBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="7" width="18" height="10" rx="5" fill="#232a36" stroke="#34c759" stroke-width="2"/><circle cx="8.5" cy="12" r="1.5" fill="#fff"/><circle cx="15.5" cy="12" r="1.5" fill="#fff"/><rect x="9.5" y="15" width="5" height="1.5" rx="0.75" fill="#34c759"/></svg>';
-  darkBtn.title = 'Toggle dark mode';
-  darkBtn.className = 'dark-toggle-btn';
-  darkBtn.addEventListener('click', toggleDarkMode);
-  document.body.appendChild(darkBtn);
-
-  // Restore dark mode from localStorage
-  if (localStorage.getItem('darkMode') === 'true') {
-    document.body.classList.add('dark-mode');
-  }
+  // Remove dark mode toggle and robot button if present
+  var darkBtn = document.querySelector('.dark-toggle-btn');
+  if (darkBtn) darkBtn.remove();
+  var bigRobot = document.getElementById('bigRobotToggle');
+  if (bigRobot) bigRobot.remove();
+  document.body.classList.add('dark-mode'); // Always dark
 
   // Back to top button
   createBackToTop();
-
-  // --- BIG ROBOT DARK MODE TOGGLE ---
-  const bigRobot = document.getElementById('bigRobotToggle');
-  if (bigRobot) {
-    bigRobot.addEventListener('click', toggleDarkMode);
-  }
 });
