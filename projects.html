@@ -74,6 +74,108 @@
         <p>Built SentinelAshoka, a cybersecurity monitoring system for NGOs and journalists.</p>
       </div>
     </section>
+
+    <main class="page-content rakshanet-whitepaper glass fade-in">
+      <h1 class="raksha-title">RakshaNet: Unified AI-Driven Cybersecurity Observability Platform</h1>
+      <blockquote class="jobs-quote">“Design is not just what it looks like and feels like. Design is how it works.”<br><span>— Steve Jobs</span></blockquote>
+      <p class="raksha-meta"><strong>Author:</strong> Sudip Hazra<br/><strong>Version:</strong> 1.0<br/><strong>Date:</strong> June 2025</p>
+      <section class="section">
+        <h2>Abstract</h2>
+        <p>RakshaNet is an open, extensible, and AI-powered cybersecurity observability and response platform that integrates log analytics, threat intelligence, and agent-based endpoint monitoring into one unified system. It aims to provide a robust alternative to Splunk and CrowdStrike with modern cloud-native architecture and real-time detection and automation capabilities.</p>
+      </section>
+      <section class="section">
+        <h2>1. Introduction</h2>
+        <p>Security operations face growing complexity, massive data ingestion needs, and increasing attacker sophistication. RakshaNet is designed from first principles to address these using modular AI, clean system design, and full-stack visibility across infrastructure, applications, and cloud APIs.</p>
+      </section>
+      <section class="section">
+        <h2>2. Problem Statement</h2>
+        <ul>
+          <li>Legacy SIEMs like Splunk are expensive and slow at scale.</li>
+          <li>Most EDRs lack observability or are closed systems.</li>
+          <li>Current solutions separate logging, alerting, and ML — RakshaNet unifies them.</li>
+        </ul>
+      </section>
+      <section class="section">
+        <h2>3. Architecture Overview</h2>
+        <img src="/assets/rakshanet_architecture.png" alt="RakshaNet Architecture Diagram" />
+        <p>RakshaNet’s architecture consists of:</p>
+        <ul>
+          <li><strong>Raksha Agent:</strong> Lightweight binary for log/metric/event collection, EDR-like behavior capture, and endpoint action hooks.</li>
+          <li><strong>RakshaCore (Server):</strong> Aggregates all data, runs ML pipelines, stores optimized Delta Lake tables, and exposes APIs/UI.</li>
+          <li><strong>ML Engine:</strong> Runs anomaly detection, behavioral profiling, threat scoring, and correlation using open ML models.</li>
+          <li><strong>Cloud Collector:</strong> Ingests AWS/GCP/Azure cloud logs, CSPM data, and cloud security posture via APIs.</li>
+        </ul>
+      </section>
+      <section class="section">
+        <h2>4. Key Features</h2>
+        <ul>
+          <li>Streaming & batch ingestion (Apache Spark + Delta Lake)</li>
+          <li>Real-time alerting with rules + anomaly detection</li>
+          <li>Custom detection-as-code support</li>
+          <li>Role-based dashboards & DevSecOps integration</li>
+          <li>EDR-like local agent visibility + control hooks</li>
+          <li>Cloud-native monitoring (IAM, API usage, misconfig detection)</li>
+        </ul>
+      </section>
+      <section class="section">
+        <h2>5. Algorithms Used</h2>
+        <ul>
+          <li><strong>Clustering:</strong> K-Means, DBSCAN for anomaly grouping</li>
+          <li><strong>Classification:</strong> Random Forest, Logistic Regression</li>
+          <li><strong>Sequential Models:</strong> LSTM for user behavior profiling</li>
+          <li><strong>Graph Analytics:</strong> PageRank for lateral movement detection</li>
+          <li><strong>Outlier Detection:</strong> Isolation Forest, Z-score</li>
+        </ul>
+      </section>
+      <section class="section">
+        <h2>6. Agent Design (RakshaAgent)</h2>
+        <p>Inspired by CrowdStrike Falcon’s EDR agent but with open behavior logic and local buffering.</p>
+        <ul>
+          <li>Written in Rust (or Go)</li>
+          <li>Captures system metrics, syscall patterns, file/network activity</li>
+          <li>Injects local threat rules and updates via secure channel</li>
+          <li>Can auto-enrich or trigger responses on specific behaviors</li>
+        </ul>
+      </section>
+      <section class="section">
+        <h2>7. Cloud Monitoring Features</h2>
+        <p>Native support for:</p>
+        <ul>
+          <li>AWS CloudTrail, GuardDuty</li>
+          <li>Azure Activity Logs, Defender for Cloud</li>
+          <li>GCP Admin Activity, VPC Flow Logs</li>
+          <li>IAM misconfiguration detection + excessive privilege alerting</li>
+        </ul>
+      </section>
+      <section class="section">
+        <h2>8. Competitive Positioning</h2>
+        <table border="1" cellpadding="6" cellspacing="0">
+          <tr><th>Feature</th><th>Splunk</th><th>CrowdStrike</th><th>RakshaNet</th></tr>
+          <tr><td>Open Agent</td><td>No</td><td>No</td><td>Yes</td></tr>
+          <tr><td>Cloud-native</td><td>Partial</td><td>Yes</td><td>Yes</td></tr>
+          <tr><td>ML Transparency</td><td>No</td><td>No</td><td>Yes</td></tr>
+          <tr><td>Detection-as-Code</td><td>No</td><td>Partial</td><td>Yes</td></tr>
+          <tr><td>Custom Pipelines</td><td>No</td><td>No</td><td>Yes (Spark)</td></tr>
+        </table>
+      </section>
+      <section class="section">
+        <h2>9. Future Roadmap</h2>
+        <ul>
+          <li>Auto-remediation modules for IAM drift and lateral movement</li>
+          <li>Graph-powered attack path engine</li>
+          <li>Signed rule marketplaces + custom ML model registry</li>
+          <li>Kubernetes and service mesh observability</li>
+        </ul>
+      </section>
+      <section class="section">
+        <h2>10. Call to Action</h2>
+        <p>RakshaNet is a call for the future of ethical, extensible, and transparent cybersecurity tooling. Contribute, fork, or deploy your instance today. Visit <a href="https://sudiphazra.com">sudiphazra.com</a> to explore the repo and get started.</p>
+      </section>
+      <section class="section">
+        <h2>11. References</h2>
+        <p>[1] MITRE ATT&CK<br/>[2] OpenTelemetry<br/>[3] CrowdStrike Technical Docs<br/>[4] Splunk Observability Architecture<br/>[5] Apache Spark MLlib</p>
+      </section>
+    </main>
   </main>
 
   <footer>
@@ -82,5 +184,120 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <style>
+    body {
+      background: linear-gradient(120deg, #f5f6fa 60%, #b6e0fe 100%, #e5e9f2 120%);
+      font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+      color: #232a36;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+    }
+    .page-content.rakshanet-whitepaper {
+      max-width: 900px;
+      margin: 3rem auto 2.5rem auto;
+      padding: 2.5rem 2.2rem;
+      border-radius: 1.2rem;
+      background: rgba(255,255,255,0.65);
+      box-shadow: 0 8px 40px 0 #b6e0fe22, 0 1.5px 0 #fff;
+      backdrop-filter: blur(14px) saturate(1.1);
+      -webkit-backdrop-filter: blur(14px) saturate(1.1);
+      border: 1.5px solid rgba(255,255,255,0.18);
+      animation: fadeIn 1.5s cubic-bezier(0.4,0,0.2,1) 0.8s both;
+    }
+    .raksha-title {
+      font-size: 2.5rem;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      color: #0071e3;
+      text-align: center;
+      margin-bottom: 1.2rem;
+      text-shadow: 0 6px 36px #34c75933, 0 2px 0 #fff;
+    }
+    .raksha-meta {
+      text-align: center;
+      color: #888;
+      font-size: 1.08rem;
+      margin-bottom: 2.2rem;
+    }
+    .jobs-quote {
+      margin: 2.5rem auto 2rem auto;
+      max-width: 520px;
+      font-size: 1.18rem;
+      font-style: italic;
+      color: #232a36;
+      background: rgba(255,255,255,0.7);
+      border-left: 4px solid #34c759;
+      padding: 1.1rem 1.5rem 1.1rem 1.3rem;
+      border-radius: 1.1rem;
+      box-shadow: 0 2px 12px #b6e0fe33;
+      letter-spacing: 0.01em;
+      line-height: 1.5;
+      animation: fadeIn 1.5s cubic-bezier(0.4,0,0.2,1) 1.1s both;
+    }
+    .jobs-quote span {
+      display: block;
+      font-size: 1rem;
+      color: #0071e3;
+      margin-top: 0.7rem;
+      font-style: normal;
+      font-weight: 600;
+    }
+    .section h2 {
+      color: #0071e3;
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-top: 2.2rem;
+      margin-bottom: 0.7rem;
+      letter-spacing: 0.01em;
+    }
+    .section ul, .section p, .section table {
+      font-size: 1.08rem;
+    }
+    .section table {
+      border-radius: 0.7rem;
+      overflow: hidden;
+      box-shadow: 0 2px 12px #b6e0fe22;
+      margin: 1.2rem 0;
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .section th, .section td {
+      padding: 0.7rem 1.1rem;
+      border: 1px solid #e5e9f2;
+      text-align: left;
+    }
+    .section th {
+      background: #f5f6fa;
+      color: #0071e3;
+      font-weight: 700;
+    }
+    .section tr:nth-child(even) {
+      background: #f8fafc;
+    }
+    .footer-note {
+      margin-top: 0.7rem;
+      font-size: 0.98rem;
+      color: #b6b6b6;
+      letter-spacing: 0.01em;
+      text-align: center;
+      font-style: italic;
+      opacity: 0.85;
+    }
+    @media (max-width: 700px) {
+      .page-content.rakshanet-whitepaper {
+        padding: 1.2rem 0.7rem;
+      }
+      .raksha-title {
+        font-size: 1.5rem;
+      }
+      .section h2 {
+        font-size: 1.08rem;
+      }
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+  </style>
 </body>
 </html>
