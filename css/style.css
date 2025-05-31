@@ -414,54 +414,74 @@ body.dark-mode .glass {
   pointer-events: none;
 }
 
-/* --- PILL BUTTONS --- */
-.pill-btn, .project-link {
-  border-radius: 999px !important;
-  padding: 0.55rem 1.5rem !important;
+/* --- PROJECT CARD BADGES, METRICS, ACTIONS, SHINE --- */
+.project-badges {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.7rem;
+  flex-wrap: wrap;
+}
+.badge {
+  display: inline-block;
+  padding: 0.18em 0.85em;
+  font-size: 0.92em;
   font-weight: 700;
-  font-size: 1.08rem;
-  background: linear-gradient(90deg, #0071e3 60%, #34c759 100%);
+  border-radius: 999px;
+  background: #e5e9f2;
+  color: #0071e3;
+  letter-spacing: 0.03em;
+  box-shadow: 0 1px 6px #b6e0fe22;
+  border: 1.5px solid #b6e0fe;
+  transition: background 0.2s, color 0.2s;
+}
+.badge-ai { background: #e6f9f0; color: #34c759; border-color: #34c75944; }
+.badge-open { background: #f0f7ff; color: #0071e3; border-color: #0071e344; }
+.badge-security { background: #f8f5ff; color: #7c3aed; border-color: #7c3aed44; }
+.badge-2025, .badge-2024, .badge-2023, .badge-2022 {
+  background: #fffbe6;
+  color: #eab308;
+  border-color: #eab30844;
+}
+.project-metrics {
+  font-size: 0.98em;
+  color: #888;
+  margin: 0.5rem 0 0.7rem 0;
+  letter-spacing: 0.01em;
+}
+.project-actions {
+  display: flex;
+  gap: 0.7rem;
+  margin-top: 0.5rem;
+}
+.project-link.secondary {
+  background: #fff;
+  color: #0071e3;
+  border: 2px solid #0071e3;
+  font-weight: 600;
+  box-shadow: 0 2px 12px #0071e322;
+}
+.project-link.secondary:hover {
+  background: #34c759;
   color: #fff;
-  box-shadow: 0 2px 12px #0071e344;
-  border: none;
-  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+  border-color: #34c759;
+}
+.project-card {
   position: relative;
   overflow: hidden;
 }
-.pill-btn:hover, .project-link:hover {
-  background: linear-gradient(90deg, #34c759 60%, #0071e3 100%);
-  color: #fff;
-  box-shadow: 0 4px 24px #34c75944;
+.project-card.shine::after, .project-card::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -60%;
+  width: 60%; height: 100%;
+  background: linear-gradient(120deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.45) 60%, rgba(255,255,255,0.12) 100%);
+  transform: skewX(-18deg);
+  animation: shine 2.8s cubic-bezier(0.4,0,0.2,1) infinite;
+  pointer-events: none;
+  z-index: 1;
 }
-
-/* --- ENHANCED GRADIENTS & DEPTH --- */
-.hero {
-  background: linear-gradient(120deg, #f5f6fa 60%, #b6e0fe 100%, #e5e9f2 120%);
-  box-shadow: 0 8px 40px 0 #b6e0fe22;
-}
-body.dark-mode .hero {
-  background: linear-gradient(120deg, #181c24 60%, #232a36 100%, #0071e3 120%);
-  box-shadow: 0 8px 40px 0 #0071e322;
-}
-
-.page-content, .intro, .blog-preview {
-  box-shadow: 0 4px 32px 0 #b6e0fe22, 0 1.5px 0 #fff;
-}
-body.dark-mode .page-content, body.dark-mode .intro, body.dark-mode .blog-preview {
-  box-shadow: 0 4px 32px 0 #0071e322, 0 1.5px 0 #232a36;
-}
-
-/* --- MORE WHITESPACE & SOFT SHADOWS --- */
-.hero, .page-content, .intro, .projects-grid, .project-card {
-  margin-bottom: 2.5rem;
-}
-
-.project-card {
-  box-shadow: 0 8px 40px 0 #b6e0fe22, 0 2px 0 #fff;
-}
-.project-card.shine::after {
-  /* Shine effect for cards */
-  width: 60%;
+.project-card:hover::after {
+  animation-play-state: running;
 }
 
 /* --- END ENHANCEMENTS --- */
