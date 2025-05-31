@@ -877,3 +877,29 @@ body.dark-mode #robot-svg {
 body, .page-content, .glass, .raksha-title, .jobs-quote, .raksha-meta, .section th, .section td {
   color: #e5e9f2 !important;
 }
+
+/* Competitive Positioning Table Styles */
+.section.competitive-positioning-table table {
+  background: #1a3d1a !important;
+  border-radius: 0.7rem;
+  overflow: hidden;
+  box-shadow: 0 2px 12px #34c75944;
+  margin: 1.2rem 0;
+  width: 100%;
+  border-collapse: collapse;
+}
+.section.competitive-positioning-table th, .section.competitive-positioning-table td {
+  padding: 0.7rem 1.1rem;
+  border: 1px solid #34c759;
+  text-align: left;
+  background: #193c19 !important;
+  color: #b6e0fe !important;
+}
+.section.competitive-positioning-table th {
+  background: #34c759 !important;
+  color: #181c24 !important;
+  font-weight: 700;
+}
+.section.competitive-positioning-table tr:nth-child(even) td {
+  background: #225c22 !important;
+}
