@@ -15,6 +15,31 @@ function typeWriter(element, text, speed = 80) {
   typing();
 }
 
+// --- DARK MODE TOGGLE ---
+function toggleDarkMode() {
+  document.body.classList.toggle('dark-mode');
+  localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+}
+
+// --- BACK TO TOP BUTTON ---
+function createBackToTop() {
+  const btn = document.createElement('button');
+  btn.id = 'backToTop';
+  btn.title = 'Back to top';
+  btn.innerHTML = '↑';
+  document.body.appendChild(btn);
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) {
+      btn.classList.add('show');
+    } else {
+      btn.classList.remove('show');
+    }
+  });
+}
+
 document.addEventListener('DOMContentLoaded', function () {
   const heroTitle = document.querySelector('.hero .mono');
   if (heroTitle) {
@@ -65,4 +90,32 @@ document.addEventListener('DOMContentLoaded', function () {
     canvas.width = width;
     canvas.height = height;
   });
+
+  // Dark mode toggle button
+  let darkBtn = document.createElement('button');
+  darkBtn.textContent = '🌙';
+  darkBtn.title = 'Toggle dark mode';
+  darkBtn.style.position = 'fixed';
+  darkBtn.style.top = '1.2rem';
+  darkBtn.style.right = '1.2rem';
+  darkBtn.style.zIndex = '150';
+  darkBtn.style.background = '#fff';
+  darkBtn.style.border = 'none';
+  darkBtn.style.borderRadius = '50%';
+  darkBtn.style.width = '2.5rem';
+  darkBtn.style.height = '2.5rem';
+  darkBtn.style.fontSize = '1.3rem';
+  darkBtn.style.cursor = 'pointer';
+  darkBtn.style.boxShadow = '0 2px 8px #232a3644';
+  darkBtn.style.transition = 'background 0.2s';
+  darkBtn.addEventListener('click', toggleDarkMode);
+  document.body.appendChild(darkBtn);
+
+  // Restore dark mode from localStorage
+  if (localStorage.getItem('darkMode') === 'true') {
+    document.body.classList.add('dark-mode');
+  }
+
+  // Back to top button
+  createBackToTop();
 });
