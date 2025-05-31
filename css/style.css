@@ -273,15 +273,124 @@ header {
     font-size: 1.08rem;
   }
 }
-@media (max-width: 400px) {
-  .hero .mono {
-    font-size: 1.1rem;
+
+/* --- Responsive grid and card layout for projects page --- */
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+.project-card {
+  background: linear-gradient(120deg,#232a36 80%,#181c24 100%);
+  color: #e5e9f2;
+  border: 2px solid #34c75944;
+  box-shadow: 0 2px 12px #34c75922;
+  border-radius: 1rem;
+  padding: 1.5rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.8rem;
+  font-size: 1.08rem;
+  font-weight: 600;
+  min-width: 260px;
+  max-width: 340px;
+  flex: 1 1 320px;
+  margin: 0.5rem;
+}
+.project-card h2 {
+  font-size: 1.3rem;
+  margin: 0.5rem 0 0.2rem 0;
+}
+.project-card .project-desc {
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: #b6e0fe;
+  margin-bottom: 0.5rem;
+}
+.project-badges {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.2rem;
+}
+.badge {
+  border-radius: 999px;
+  padding: 0.2rem 0.8rem;
+  font-size: 0.92rem;
+  font-weight: 700;
+  background: #232a36;
+  color: #34c759;
+  border: 1.5px solid #34c75944;
+}
+.badge-ai { color: #0071e3; border-color: #0071e344; }
+.badge-open { color: #34c759; border-color: #34c75944; }
+.badge-security { color: #b6e0fe; border-color: #b6e0fe44; }
+.project-actions {
+  display: flex;
+  gap: 0.7rem;
+  margin-top: 0.7rem;
+}
+.project-link.pill-btn {
+  font-size: 0.98rem;
+  padding: 0.45rem 1.2rem;
+}
+.project-link.pill-btn.secondary {
+  background: #0071e3;
+  color: #fff;
+}
+.project-link.pill-btn.secondary:hover {
+  background: #34c759;
+  color: #181c24;
+}
+.animated-icon {
+  width: 2.2rem;
+  height: 2.2rem;
+}
+@media (max-width: 900px) {
+  .projects-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
   }
-  .hero-subtitle {
+  .project-card {
+    min-width: 90vw;
+    max-width: 98vw;
+    width: 100%;
+    padding: 1.2rem 0.7rem;
+  }
+}
+@media (max-width: 600px) {
+  .projects-title {
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+  }
+  .project-card {
+    font-size: 0.98rem;
+    min-width: 98vw;
+    max-width: 99vw;
+    padding: 1rem 0.3rem;
+  }
+  .project-card h2 {
+    font-size: 1.08rem;
+  }
+  .project-card .project-desc {
     font-size: 0.95rem;
   }
-  .projects-title {
-    font-size: 1.1rem;
+  .project-badges {
+    font-size: 0.85rem;
+  }
+  .project-actions {
+    flex-direction: column;
+    gap: 0.4rem;
+    width: 100%;
+  }
+  .project-link.pill-btn {
+    width: 100%;
+    text-align: center;
+    font-size: 0.95rem;
+    padding: 0.5rem 0;
   }
 }
 
