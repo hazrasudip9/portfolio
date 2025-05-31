@@ -847,3 +847,33 @@ body.dark-mode #robot-svg {
     font-size: 1.1rem;
   }
 }
+
+/* Force all text, subtitles, descriptions, and highlight spans to use a light color for readability on dark backgrounds */
+.hero-subtitle,
+.project-desc,
+.project-features,
+.section ul,
+.section p,
+.section table,
+.footer-note,
+.quick-highlights span,
+.highlight-card span,
+.intro,
+.blog-preview,
+.projects-title,
+.timeline-event p,
+.timeline-event h3 {
+  color: #e5e9f2 !important;
+}
+
+/* Ensure all SVG icons and text are visible on dark backgrounds */
+.animated-icon,
+.hero-svg-art,
+.highlight-card svg {
+  filter: none !important;
+}
+
+/* Fix for any remaining dark/grey text */
+body, .page-content, .glass, .raksha-title, .jobs-quote, .raksha-meta, .section th, .section td {
+  color: #e5e9f2 !important;
+}
