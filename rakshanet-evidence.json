@@ -1,0 +1,72 @@
+{
+  "title": "RakshaNet Security Platform \u2014 recorded local lab snapshot",
+  "snapshot_date": "2026-09-23",
+  "live": false,
+  "scope": "Bounded local dependency-remediation evaluation; not production certification",
+  "recorded_passing_runs_in_reviewed_set": 16,
+  "release_gate_target": 20,
+  "release_gate_certified": false,
+  "reference_run_id": "d962fcbfbacf455e95e77a6866177176",
+  "reference_report_sha256": "344e7eb15d71a971b98ed48647511e631246a71e8458034323655b13313f93da",
+  "checks": [
+    {
+      "check": "four_separate_services_ready",
+      "pass": true
+    },
+    {
+      "check": "missing_intelligence_blocks_intake",
+      "pass": true
+    },
+    {
+      "check": "false_positive_suppressed",
+      "pass": true
+    },
+    {
+      "check": "consumer_outage_catches_up",
+      "pass": true
+    },
+    {
+      "check": "urllib3-success",
+      "pass": true
+    },
+    {
+      "check": "urllib3-rollback",
+      "pass": true
+    },
+    {
+      "check": "urllib3-restart",
+      "pass": true
+    },
+    {
+      "check": "urllib3-review",
+      "pass": true
+    },
+    {
+      "check": "restart_preserves_cases_and_consumer_cursor",
+      "pass": true
+    },
+    {
+      "check": "duplicate_delivery_is_idempotent",
+      "pass": true
+    },
+    {
+      "check": "independent_retest_after_service_restart",
+      "pass": true
+    },
+    {
+      "check": "ai_provider_removed_fails_closed",
+      "pass": true
+    }
+  ],
+  "limitations": [
+    "Curated official advisory; not live collector discovery.",
+    "Approval uses separate test-role API credentials, not a human click.",
+    "TelemetryX optional inventory/projection adapters, not full lake/shipper acceptance.",
+    "Approval and executor still share a service; not production readiness."
+  ],
+  "outcomes": {
+    "success": "CLOSED / FIX_CONFIRMED; deployed urllib3 2.8.0",
+    "rollback": "ROLLED_BACK; exposure remains OPEN; five files restored",
+    "safe_control": "FALSE_POSITIVE_SUPPRESSED; no remediation"
+  }
+}

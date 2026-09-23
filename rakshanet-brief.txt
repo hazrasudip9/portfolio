@@ -1,0 +1,44 @@
+RAKSHANET SECURITY PLATFORM
+Customer overview | Recorded local evaluation | 23 September 2026
+
+FROM EXPOSURE TO VERIFIED CLOSURE
+Intelligence, telemetry, scoped validation and human-governed remediation,
+connected around a case and its evidence.
+
+FOUR INDEPENDENT PRODUCTS
+SentinelAshoka: threat intelligence, advisory context and source provenance.
+TelemetryX: normalized telemetry, inventory, exposure context and case projections.
+RakshaNet: scoped validation, preserved evidence and independent retesting.
+Sanjeevani: persisted remediation plans, approvals, bounded execution and recovery.
+
+CONNECTED WORKFLOW
+1. Put a relevant intelligence signal in asset context.
+2. Validate the authorized target to establish exposure.
+3. Prepare and approve a bounded remediation plan.
+4. Execute, verify locally and independently retest.
+5. Close only when the retest confirms the fix; otherwise recover and keep open.
+
+RECORDED EVIDENCE
+16 completed passing runs in the reviewed snapshot; 12 checks per run.
+The separate 20-consecutive-pass release gate is not certified by this website.
+Real dependency repair: CLOSED / FIX_CONFIRMED after independent retest.
+Deliberately stale deployment: rollback; exposure remained open.
+Safe control: false positive suppressed; no remediation.
+Restart persistence, duplicate replay and AI-provider failure were also checked.
+
+LIMITATIONS
+The official advisory was curated, not found by a live collector.
+Approval was tested with separate role API credentials, not a human click.
+TelemetryX coverage used optional inventory and projection adapters, not full
+lake or shipper acceptance. Approval and execution still share a service.
+This does not establish broad autonomous repair or production readiness.
+
+DEVELOPMENT ORCHESTRATION
+Hermes coordinates product development. Jev provides logged decision advice.
+Neither role substitutes for product permissions or execution approval.
+
+ABOUT THIS WEBSITE
+A customer-facing platform presentation. Scenario controls illustrate recorded
+outcomes; they do not operate services. There is no live environment connection,
+account system, payment flow or collection of lead data.
+See rakshanet-evidence.json beside this brief for the redacted machine-readable snapshot.
