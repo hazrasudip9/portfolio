@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ExamReady India — Photo, Signature & PDF for Govt Exams</title>
+  <meta name="description" content="Resize exam photos and signatures to exact pixels and KB in your browser. SSC, RRB, IBPS, UPSC, CTET. Files never leave your device." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="announce" role="status">
+    <strong>No data is saved.</strong>
+    Your photo, signature and PDF stay on this device — nothing is uploaded or stored on a server.
+  </div>
+  <div class="wrap">
+    <div class="tricolor"></div>
+    <header class="topbar">
+      <a class="brand" href="./">
+        <div class="mark">ER</div>
+        <div>
+          <b>ExamReady India</b>
+          <span>Photo · signature · PDF for Indian exam forms</span>
+        </div>
+      </a>
+      <div class="privacy">100% on-device</div>
+    </header>
+
+    <section class="hero">
+      <p class="eyebrow">Free · no login · no watermark</p>
+      <h1>Exam-ready photo &amp; signature in seconds.</h1>
+      <p>
+        Pick SSC, RRB, IBPS, UPSC or a custom size. Resize and compress in your browser.
+        The file never leaves your phone or laptop.
+      </p>
+      <ul class="trust">
+        <li>No upload</li>
+        <li>No account</li>
+        <li>No copy kept</li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <label class="field" for="examSelect">Exam / form</label>
+      <select id="examSelect"></select>
+      <p class="note" id="examNote"></p>
+      <p class="note"><a id="examSource" href="#" hidden target="_blank" rel="noopener">Official source</a></p>
+
+      <div class="tabs">
+        <button class="tab active" data-tool="photo" type="button">Photo</button>
+        <button class="tab" data-tool="sign" type="button">Signature</button>
+        <button class="tab" data-tool="pdf" type="button">PDF compress</button>
+      </div>
+      <div class="chip" id="specChip"></div>
+      <div class="custom" id="customRow" hidden>
+        <div><label class="field">Width px</label><input id="cw" type="number" min="20" /></div>
+        <div><label class="field">Height px</label><input id="ch" type="number" min="20" /></div>
+        <div><label class="field">Min KB</label><input id="cmin" type="number" min="1" /></div>
+        <div><label class="field">Max KB</label><input id="cmax" type="number" min="1" /></div>
+      </div>
+
+      <label class="drop" id="drop">
+        <strong id="dropTitle">Drop photo or signature here</strong>
+        <div class="note" id="dropHint">JPG, PNG, WebP · processed locally · not uploaded</div>
+        <input id="fileInput" type="file" accept="image/*,application/pdf" />
+      </label>
+
+      <div id="imagePanel">
+        <p class="meta" id="origMeta"></p>
+        <div class="preview-wrap" id="previewWrap">
+          <canvas id="preview" width="200" height="230"></canvas>
+        </div>
+        <p class="meta" id="outMeta"></p>
+        <p class="meta" id="status">Upload a file to validate and auto-fix.</p>
+        <ul class="checks" id="checks"></ul>
+        <div class="actions">
+          <button class="btn ghost" id="fitBtn" type="button">Fit / center</button>
+          <button class="btn primary" id="downloadBtn" type="button" disabled>Download JPEG</button>
+        </div>
+        <p class="note">Drag the preview to reposition. Scroll to zoom.</p>
+      </div>
+
+      <div id="pdfPanel" hidden>
+        <p class="meta" id="pdfMeta">Choose a PDF with the box above.</p>
+        <label class="field" for="pdfTarget">Target size (KB)</label>
+        <input id="pdfTarget" type="number" value="200" min="30" />
+        <div class="actions">
+          <button class="btn primary" id="pdfGo" type="button">Compress in browser</button>
+          <button class="btn" id="pdfDownload" type="button" disabled>Download PDF</button>
+        </div>
+        <p class="meta" id="pdfStatus"></p>
+        <div id="pdfResult" hidden>
+          <p class="meta" id="pdfOutMeta"></p>
+        </div>
+        <p class="note">If the PDF is already lean text, size may not drop to a tiny target. Image-heavy scans compress better (pages may be rasterized as a last resort).</p>
+      </div>
+    </section>
+
+    <section style="margin-top:28px">
+      <h2 style="font-family:Fraunces,serif;font-weight:600">Preset chart</h2>
+      <p class="note">Starting points only. Always match the latest official notification before you submit.</p>
+      <div class="table-wrap panel" style="padding:8px 12px">
+        <table id="examTable">
+          <thead>
+            <tr><th>Exam</th><th>Photo</th><th>Signature</th><th></th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p><strong>Not affiliated</strong> with SSC, UPSC, IBPS, RRB, CBSE or any exam body. ExamReady India is an independent helper tool.</p>
+      <p>Your file is read with the browser File API and drawn on a canvas on this device. We do not operate an upload server for your documents. Analytics, if added later, must never include file contents.</p>
+      <p>Photo rules change (live capture, pixel variants, KB caps). Treat presets as conveniences and re-check the notice linked on each exam.</p>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script src="exams.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
